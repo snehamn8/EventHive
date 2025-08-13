@@ -2,12 +2,15 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "client": "npm start --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -24,12 +27,4 @@
   "devDependencies": {
     "nodemon": "^3.1.9"
   }
-}
-
-"scripts": {
-  "start": "node server/server.js",
-  "server": "nodemon server/server.js",
-  "client": "npm start --prefix client",
-  "build": "npm run build --prefix client",
-  "heroku-postbuild": "npm run build"
 }
